@@ -11,6 +11,13 @@ module.exports = function(grunt) {
             },
             dev: {}
         },
+        'gh-pages': {
+            options: {
+                base: 'build',
+                branch: 'gh-pages'
+            },
+            src: '**/*'
+        },
         shell: {
             jekyll: {
                 command: 'jekyll build;'
@@ -26,6 +33,10 @@ module.exports = function(grunt) {
     // Tasks
     grunt.registerTask('default', [
         'jekyll:dev'
+    ]);
+    grunt.registerTask('build', [
+        'jekyll:dev',
+        'gh-pages'
     ]);
 
 };
