@@ -1,2 +1,4 @@
 source: src
 destination: build
+
+project_url: https://github.com/darklg/MailHTML
